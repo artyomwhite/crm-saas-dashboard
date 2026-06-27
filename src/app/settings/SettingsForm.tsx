@@ -70,9 +70,10 @@ export function SettingsForm({ profile, onSave }: SettingsFormProps) {
 
       <Card className="mt-6">
         <h3 className="text-sm font-semibold text-slate-900">About this app</h3>
-        <p className="mt-2 text-sm text-slate-500">
-          CRM SaaS Dashboard MVP — mock data with localStorage persistence. No
-          backend required. Deploy-ready for Vercel.
+        <p className="mt-2 text-sm leading-relaxed text-slate-500">
+          A SaaS-style CRM product simulation with browser-based persistence.
+          Built to demonstrate real-world business software UX and frontend
+          architecture — deploy-ready, no backend required.
         </p>
       </Card>
     </>

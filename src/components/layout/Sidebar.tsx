@@ -58,14 +58,16 @@ export function Sidebar() {
   const { profile } = useCrm();
 
   return (
-    <aside className="flex h-full w-64 shrink-0 flex-col border-r border-slate-200 bg-white">
-      <div className="flex h-16 items-center gap-2.5 border-b border-slate-200 px-6">
-        <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-indigo-600 text-sm font-bold text-white">
+    <aside className="flex h-full w-64 shrink-0 flex-col border-r border-slate-200/80 bg-white">
+      <div className="flex h-16 items-center gap-2.5 border-b border-slate-200/80 px-6">
+        <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-indigo-600 text-sm font-bold text-white shadow-sm shadow-indigo-600/30">
           C
         </div>
         <div>
-          <p className="text-sm font-semibold text-slate-900">CRM SaaS</p>
-          <p className="text-xs text-slate-500">Dashboard</p>
+          <p className="text-sm font-semibold tracking-tight text-slate-900">
+            CRM SaaS
+          </p>
+          <p className="text-xs text-slate-500">Sales Workspace</p>
         </div>
       </div>
 
@@ -76,9 +78,9 @@ export function Sidebar() {
             <Link
               key={item.href}
               href={item.href}
-              className={`flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium transition-colors ${
+              className={`flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium transition-all duration-150 ${
                 active
-                  ? "bg-indigo-50 text-indigo-700"
+                  ? "bg-indigo-50 text-indigo-700 shadow-sm shadow-indigo-100"
                   : "text-slate-600 hover:bg-slate-50 hover:text-slate-900"
               }`}
             >

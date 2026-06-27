@@ -94,11 +94,11 @@ export default function ClientsPage() {
           <div className="overflow-x-auto">
             <table className="w-full text-left text-sm">
               <thead>
-                <tr className="border-b border-slate-200 bg-slate-50 text-xs font-medium uppercase tracking-wide text-slate-500">
-                  <th className="px-6 py-3">Name</th>
-                  <th className="px-6 py-3">Email</th>
-                  <th className="px-6 py-3">Status</th>
-                  <th className="px-6 py-3 text-right">Actions</th>
+                <tr className="border-b border-slate-200 bg-slate-50/80 text-xs font-semibold uppercase tracking-wider text-slate-500">
+                  <th className="px-6 py-3.5">Name</th>
+                  <th className="px-6 py-3.5">Email</th>
+                  <th className="px-6 py-3.5">Status</th>
+                  <th className="px-6 py-3.5 text-right">Actions</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-slate-100">
@@ -115,20 +115,20 @@ export default function ClientsPage() {
                   filtered.map((client) => (
                     <tr
                       key={client.id}
-                      className="transition-colors hover:bg-slate-50"
+                      className="transition-colors duration-150 hover:bg-slate-50/80"
                     >
-                      <td className="px-6 py-4 font-medium text-slate-900">
+                      <td className="px-6 py-3.5 font-medium text-slate-900">
                         {client.name}
                       </td>
-                      <td className="px-6 py-4 text-slate-600">
+                      <td className="px-6 py-3.5 text-slate-600">
                         {client.email}
                       </td>
-                      <td className="px-6 py-4">
+                      <td className="px-6 py-3.5">
                         <Badge variant={statusBadgeVariant(client.status)}>
                           {client.status}
                         </Badge>
                       </td>
-                      <td className="px-6 py-4">
+                      <td className="px-6 py-3.5">
                         <div className="flex justify-end gap-2">
                           <Button
                             variant="ghost"
